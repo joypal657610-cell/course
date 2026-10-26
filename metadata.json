@@ -1,0 +1,6 @@
+{
+  "name": "TechVantage BD",
+  "description": "TechVantage BD - Bangladesh's premium online tech course platform with secure guest checkout, bKash & Nagad payments, and private community access.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

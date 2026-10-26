@@ -1,0 +1,600 @@
+{
+  "courses": [
+    {
+      "id": "course_web_dev",
+      "title": "ফুল-স্ট্যাক ওয়েব ডেভেলপমেন্ট মাস্টারক্লাস (React, Node, Express, DB)",
+      "shortDescription": "জিরো থেকে প্রো লেভেল ফুল-স্ট্যাক প্রজেক্ট বিল্ডিং, রিয়েল ওয়ার্ল্ড এপিআই এবং ক্লাউড ডিপ্লয়মেন্ট।",
+      "fullDescription": "এই কম্প্রিহেনসিভ কোর্সে আপনি শিখবেন কীভাবে আধুনিক রিয়্যাক্ট, টাইপস্ক্রিপ্ট, নোডজেএস এবং ডেটাবেস দিয়ে প্রোডাকশন-রেডি ওয়েব অ্যাপ্লিকেশন ডেভেলপ করতে হয়। প্রতিটি চ্যাপ্টারে রিয়েল-ওয়ার্ল্ড প্রজেক্ট এবং ইন্ডাস্ট্রি স্ট্যান্ডার্ড কোডিং প্র্যাকটিস রয়েছে।",
+      "category": "ওয়েব ডেভেলপমেন্ট",
+      "thumbnailUrl": "/src/assets/images/course_web_dev_1792938698048.jpg",
+      "isFeatured": true,
+      "isPublished": true,
+      "highlights": [
+        "৪৫+ ঘণ্টার ইন-ডেপথ ভিডিও",
+        "৫টি রিয়েল-ওয়ার্ল্ড পোর্টফোলিও প্রজেক্ট",
+        "লাইভ টেলিগ্রাম কোড রিভিউ",
+        "লাইফটাইম রিসোর্স"
+      ],
+      "allowedPackageIds": [
+        "pkg_1m",
+        "pkg_3m",
+        "pkg_lifetime"
+      ],
+      "sortOrder": 1,
+      "createdAt": "2026-10-25T14:43:25.287Z",
+      "lessons": [
+        {
+          "id": "l_wd_01",
+          "courseId": "course_web_dev",
+          "title": "১.১ পরিচিতি ও মডার্ন জাভাস্ক্রিপ্ট ফান্ডামেন্টালস",
+          "durationMin": 22,
+          "isPreview": true,
+          "sortOrder": 1
+        },
+        {
+          "id": "l_wd_02",
+          "courseId": "course_web_dev",
+          "title": "১.২ রিয়্যাক্ট ও টাইপস্ক্রিপ্ট আর্কিটেকচার সেটআপ",
+          "durationMin": 35,
+          "isPreview": true,
+          "sortOrder": 2
+        },
+        {
+          "id": "l_wd_03",
+          "courseId": "course_web_dev",
+          "title": "২.১ নোডজেএস ও এক্সপ্রেস এপিআই ডিজাইন প্যাটার্নস (লকড)",
+          "durationMin": 45,
+          "isPreview": false,
+          "videoUrl": "https://techvantagebd.internal/stream/wd_secure_03.mp4",
+          "sortOrder": 3
+        },
+        {
+          "id": "l_wd_04",
+          "courseId": "course_web_dev",
+          "title": "২.২ পোস্টগ্রেসকিউএল ও সিকিউর অথেন্টিকেশন সিস্টেম (লকড)",
+          "durationMin": 50,
+          "isPreview": false,
+          "videoUrl": "https://techvantagebd.internal/stream/wd_secure_04.mp4",
+          "sortOrder": 4
+        },
+        {
+          "id": "l_wd_05",
+          "courseId": "course_web_dev",
+          "title": "৩.১ ফুল-স্ট্যাক প্রজেক্ট ডিপ্লয়মেন্ট ও ডকার কনটেইনারাইজেশন (লকড)",
+          "durationMin": 60,
+          "isPreview": false,
+          "videoUrl": "https://techvantagebd.internal/stream/wd_secure_05.mp4",
+          "sortOrder": 5
+        }
+      ]
+    },
+    {
+      "id": "course_python_ai",
+      "title": "পাইথন এবং মেশিন লার্নিং ইঞ্জিনিয়ারিং হ্যান্ডস-অন বুটক্যাম্প",
+      "shortDescription": "পাইথন ডেটা সায়েন্স, নিউরাল নেটওয়ার্ক, কম্পিউটার ভিশন এবং এআই মডেল বিল্ড ও ডিপ্লয়মেন্ট।",
+      "fullDescription": "আধুনিক এআই যুগে নিজের স্কিলকে নেক্সট লেভেলে নিয়ে যান। ডেটা প্রসেসিং, টেনসরফ্লো, পাইটর্চ, এনএলপি এবং জেনারেটিভ এআই অ্যাপ্লিকেশন তৈরির খুঁটিনাটি হাতে-কলমে শিখুন।",
+      "category": "আর্টিফিশিয়াল ইন্টেলিজেন্স",
+      "thumbnailUrl": "/src/assets/images/course_python_ai_1792938698935.jpg",
+      "isFeatured": true,
+      "isPublished": true,
+      "highlights": [
+        "৩০+ হ্যান্ডস-অন এআই ল্যাব",
+        "লার্জ ল্যাঙ্গুয়েজ মডেল ফাইন-টিউনিং",
+        "মেশিন লার্নিং পাইপলাইন",
+        "অফিসিয়াল টেলিগ্রাম সাপোর্ট"
+      ],
+      "allowedPackageIds": [
+        "pkg_1m",
+        "pkg_3m",
+        "pkg_lifetime"
+      ],
+      "sortOrder": 2,
+      "createdAt": "2026-10-25T14:43:25.287Z",
+      "lessons": [
+        {
+          "id": "l_py_01",
+          "courseId": "course_python_ai",
+          "title": "১.১ পাইথন প্রোগ্রামিং ও নিউমেরিক্যাল কম্পিউটিং বেসিক্স",
+          "durationMin": 28,
+          "isPreview": true,
+          "sortOrder": 1
+        },
+        {
+          "id": "l_py_02",
+          "courseId": "course_python_ai",
+          "title": "১.২ পান্ডাস ও ডেটা ভিজ্যুয়ালাইজেশন ওয়ার্কফ্লো",
+          "durationMin": 40,
+          "isPreview": true,
+          "sortOrder": 2
+        },
+        {
+          "id": "l_py_03",
+          "courseId": "course_python_ai",
+          "title": "২.১ সুপারভাইজড লার্নিং ও রিগ্রেশন অ্যালগরিদম (লকড)",
+          "durationMin": 55,
+          "isPreview": false,
+          "videoUrl": "https://techvantagebd.internal/stream/py_secure_03.mp4",
+          "sortOrder": 3
+        },
+        {
+          "id": "l_py_04",
+          "courseId": "course_python_ai",
+          "title": "২.২ ডিপ লার্নিং ও কনভোল্যুশনাল নিউরাল নেটওয়ার্কস (লকড)",
+          "durationMin": 65,
+          "isPreview": false,
+          "videoUrl": "https://techvantagebd.internal/stream/py_secure_04.mp4",
+          "sortOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "course_cyber_security",
+      "title": "এথিক্যাল হ্যাকিং ও সাইবার সিকিউরিটি ডিফেন্স স্পেশালাইজেশন",
+      "shortDescription": "নেটওয়ার্ক পেনিট্রেশন টেস্টিং, বাগ হান্টিং, ওয়েব সিকিউরিটি ভালনারেবিলিটি অ্যানালাইসিস।",
+      "fullDescription": "সাইবার নিরাপত্তার বর্তমান চ্যালেঞ্জ ও সুরক্ষার বাস্তব টেকনিক। কালিলিনাক্স ল্যাব, ওয়্যারশার্ক প্যাকেট অ্যানালাইসিস, ওয়েব অ্যাপ সিকিউরিটি অডিটিং এবং ডিফেন্সিভ সাইবার মেকানিজম শিখুন।",
+      "category": "সাইবার সিকিউরিটি",
+      "thumbnailUrl": "/src/assets/images/course_cyber_security_1792938699677.jpg",
+      "isFeatured": true,
+      "isPublished": true,
+      "highlights": [
+        "প্র্যাকটিক্যাল ভার্চুয়াল ল্যাব সেটআপ",
+        "বাগ বাউন্টি মেথডলজি",
+        "নেটওয়ার্ক অডিট গাইডলাইনস",
+        "সিক্রেট টেলিগ্রাম রিসার্চ গ্রুপ"
+      ],
+      "allowedPackageIds": [
+        "pkg_1m",
+        "pkg_3m",
+        "pkg_lifetime"
+      ],
+      "sortOrder": 3,
+      "createdAt": "2026-10-25T14:43:25.287Z",
+      "lessons": [
+        {
+          "id": "l_cs_01",
+          "courseId": "course_cyber_security",
+          "title": "১.১ নেটওয়ার্কিং প্রটোকল ও লিনাক্স এনভায়রনমেন্ট সেটআপ",
+          "durationMin": 30,
+          "isPreview": true,
+          "sortOrder": 1
+        },
+        {
+          "id": "l_cs_02",
+          "courseId": "course_cyber_security",
+          "title": "১.২ ইনফরমেশন গ্যাদারিং ও ফুটপ্রিন্টিং টেকনিকস",
+          "durationMin": 45,
+          "isPreview": true,
+          "sortOrder": 2
+        },
+        {
+          "id": "l_cs_03",
+          "courseId": "course_cyber_security",
+          "title": "২.১ ওয়েব ভালনারেবিলিটি স্ক্যানিং ও ওওয়াস্প টপ ১০ (লকড)",
+          "durationMin": 58,
+          "isPreview": false,
+          "videoUrl": "https://techvantagebd.internal/stream/cs_secure_03.mp4",
+          "sortOrder": 3
+        },
+        {
+          "id": "l_cs_04",
+          "courseId": "course_cyber_security",
+          "title": "২.২ পাসওয়ার্ড ক্র্যাকিং মেকানিজম ও ডিফেন্স শিল্ড (লকড)",
+          "durationMin": 50,
+          "isPreview": false,
+          "videoUrl": "https://techvantagebd.internal/stream/cs_secure_04.mp4",
+          "sortOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "course_cloud_devops",
+      "title": "ক্লাউড ডেভঅপ্স ও সার্ভার আর্কিটেকচার (Docker, K8s, AWS, CI/CD)",
+      "shortDescription": "কনটেইনারাইজেশন, কুবারনেটিস ক্লাস্টার ম্যানেজমেন্ট, অটোমেটেড সিআই/সিডি বিল্ড এবং মনিটরিং।",
+      "fullDescription": "আধুনিক সফটওয়্যার ইঞ্জিনিয়ারিংয়ের মেরুদণ্ড হলো ডেভঅপ্স। ডকার, কুবারনেটিস, অ্যাডভান্সড সিআই/সিডি অটোমেশন পাইপলাইন এবং ক্লাউড ইনফ্রাস্ট্রাকচার ম্যানেজমেন্ট শিখুন একদম শুরু থেকে।",
+      "category": "ক্লাউড ও ডেভঅপ্স",
+      "thumbnailUrl": "/src/assets/images/course_cloud_devops_1792938699068.jpg",
+      "isFeatured": false,
+      "isPublished": true,
+      "highlights": [
+        "এডব্লিউএস ও ক্লাউড প্র্যাকটিস",
+        "ডকার ও কুবারনেটিস ডিপ্লয়মেন্ট",
+        "গিটহাব অ্যাকশনস পাইপলাইন",
+        "রিয়েল প্রোডাকশন কেস স্টাডি"
+      ],
+      "allowedPackageIds": [
+        "pkg_1m",
+        "pkg_3m",
+        "pkg_lifetime"
+      ],
+      "sortOrder": 4,
+      "createdAt": "2026-10-25T14:43:25.287Z",
+      "lessons": [
+        {
+          "id": "l_cd_01",
+          "courseId": "course_cloud_devops",
+          "title": "১.১ ক্লাউড কম্পিউটিং ও সার্ভারলেস আর্কিটেকচার ওভারভিউ",
+          "durationMin": 25,
+          "isPreview": true,
+          "sortOrder": 1
+        },
+        {
+          "id": "l_cd_02",
+          "courseId": "course_cloud_devops",
+          "title": "১.২ ডকার ফান্ডামেন্টালস ও কনটেইনার লাইফসাইকেল",
+          "durationMin": 42,
+          "isPreview": true,
+          "sortOrder": 2
+        },
+        {
+          "id": "l_cd_03",
+          "courseId": "course_cloud_devops",
+          "title": "২.১ কুবারনেটিস পডস, সার্ভিসেস ও ক্লাস্টার ম্যানেজমেন্ট (লকড)",
+          "durationMin": 62,
+          "isPreview": false,
+          "videoUrl": "https://techvantagebd.internal/stream/cd_secure_03.mp4",
+          "sortOrder": 3
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "id": "pkg_1m",
+      "name": "১ মাস সাবস্ক্রিপশন",
+      "durationDays": 30,
+      "priceBdt": 150,
+      "badge": "জনপ্রিয় ট্রায়াল",
+      "description": "৩০ দিনের জন্য সকল প্রিমিয়াম টেক কোর্সের ভিডিও এবং প্রাইভেট টেলিগ্রাম সাপোর্ট চ্যানেলে পূর্ণ অ্যাক্সেস।",
+      "features": [
+        "৩০ দিনের ফুল লাইব্রেরি অ্যাক্সেস",
+        "প্রাইভেট টেলিগ্রাম ডিসকাশন গ্রুপ",
+        "রিসোর্স ও সোর্স কোড ডাউনলোড",
+        "মেন্টর প্রশ্নোত্তর সহায়তা"
+      ],
+      "isActive": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "pkg_3m",
+      "name": "৩ মাস স্পেশাল",
+      "durationDays": 90,
+      "priceBdt": 250,
+      "badge": "সেরা ভ্যালু",
+      "description": "৯০ দিন মেয়াদী এক্সটেন্ডেড সাপোর্ট ও প্রজেক্ট রিভিউ সহ টেক কেরিয়ার দ্রুত গড়ে তোলার স্পেশাল প্যাক।",
+      "features": [
+        "৯০ দিনের ফুল লাইব্রেরি অ্যাক্সেস",
+        "ভিআইপি টেলিগ্রাম কমিউনিটি অ্যাক্সেস",
+        "লাইভ কিউএন্ডএ সেশন রেকর্ডিংস",
+        "সব প্রজেক্ট ফাইল ও এক্সারসাইজ",
+        "সার্টিফিকেট রিকুয়েস্ট সুবিধা"
+      ],
+      "isActive": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "pkg_lifetime",
+      "name": "লাইফটাইম মেম্বারশিপ",
+      "durationDays": null,
+      "priceBdt": 500,
+      "badge": "আনলিমিটেড অ্যাক্সেস",
+      "description": "আজীবন সকল বর্তমান ও ভবিষ্যতের আপডেট করা কোর্স এবং পার্মানেন্ট টেলিগ্রাম ভিআইপি গ্রুপের আনলিমিটেড অ্যাক্সেস।",
+      "features": [
+        "আজীবন সকল কোর্সে আনলিমিটেড অ্যাক্সেস",
+        "লাইফটাইম টেলিগ্রাম ভিআইপি গ্রুপ লিংক",
+        "ভবিষ্যতের সকল নতুন কোর্সে ফ্রি এন্ট্রি",
+        "১-অন-১ চ্যাট সাপোর্ট ও ক্যারিয়ার গাইডেন্স",
+        "কমপ্লিশন সার্টিফিকেট"
+      ],
+      "isActive": true,
+      "sortOrder": 3
+    }
+  ],
+  "orders": [
+    {
+      "id": "TVB-TEST-5296",
+      "courseId": "course_web_dev",
+      "courseTitle": "Full-Stack Web Dev",
+      "packageId": "pkg_1m",
+      "packageSnapshot": {
+        "id": "pkg_1m",
+        "name": "১ মাস সাবস্ক্রিপশন",
+        "durationDays": 30,
+        "priceBdt": 150
+      },
+      "amountBdt": 150,
+      "customerName": "Test Student",
+      "customerPhone": "01711223344",
+      "paymentMethod": "bkash",
+      "senderPhone": "01911223344",
+      "trxId": "TXTEST1792939405295",
+      "tokenHash": "9f7dc48d15db788386278559ad4621a6fc110e439da04578770a8888dfd06f8e",
+      "status": "approved",
+      "telegramInviteStatus": "none",
+      "createdAt": "2026-10-25T14:43:25.296Z",
+      "updatedAt": "2026-10-25T14:43:25.297Z",
+      "reviewedAt": "2026-10-25T14:43:25.297Z",
+      "reviewedBy": "Admin"
+    },
+    {
+      "id": "TVB-TEST-2792",
+      "courseId": "course_web_dev",
+      "courseTitle": "Full-Stack Web Dev",
+      "packageId": "pkg_1m",
+      "packageSnapshot": {
+        "id": "pkg_1m",
+        "name": "১ মাস সাবস্ক্রিপশন",
+        "durationDays": 30,
+        "priceBdt": 150
+      },
+      "amountBdt": 150,
+      "customerName": "Test Student",
+      "customerPhone": "01711223344",
+      "paymentMethod": "bkash",
+      "senderPhone": "01911223344",
+      "trxId": "TXTEST1792939442792",
+      "tokenHash": "5af36f7f62046d4342e9cd8a61e5b53e70eaca0f786df471403dc9dc5061279d",
+      "status": "approved",
+      "telegramInviteStatus": "none",
+      "createdAt": "2026-10-25T14:44:02.792Z",
+      "updatedAt": "2026-10-25T14:44:02.794Z",
+      "reviewedAt": "2026-10-25T14:44:02.794Z",
+      "reviewedBy": "Admin"
+    },
+    {
+      "id": "TVB-TEST-8332",
+      "courseId": "course_web_dev",
+      "courseTitle": "Full-Stack Web Dev",
+      "packageId": "pkg_1m",
+      "packageSnapshot": {
+        "id": "pkg_1m",
+        "name": "১ মাস সাবস্ক্রিপশন",
+        "durationDays": 30,
+        "priceBdt": 150
+      },
+      "amountBdt": 150,
+      "customerName": "গ্রাহক (5678)",
+      "customerPhone": "01812345678",
+      "paymentMethod": "bkash",
+      "senderPhone": "01812345678",
+      "trxId": "TXTEST1793019288330",
+      "tokenHash": "a90953f603f41dcbbefb21d0609ae6afc72ec8ed97141c189331d487b80a193b",
+      "status": "approved",
+      "telegramInviteStatus": "none",
+      "createdAt": "2026-10-26T12:54:48.332Z",
+      "updatedAt": "2026-10-26T12:54:49.131Z",
+      "reviewedAt": "2026-10-26T12:54:49.131Z",
+      "reviewedBy": "Admin"
+    },
+    {
+      "id": "TVB-TEST-5096",
+      "courseId": "course_web_dev",
+      "courseTitle": "Full-Stack Web Dev",
+      "packageId": "pkg_1m",
+      "packageSnapshot": {
+        "id": "pkg_1m",
+        "name": "১ মাস সাবস্ক্রিপশন",
+        "durationDays": 30,
+        "priceBdt": 150
+      },
+      "amountBdt": 150,
+      "customerName": "গ্রাহক (5678)",
+      "customerPhone": "01812345678",
+      "paymentMethod": "bkash",
+      "senderPhone": "01812345678",
+      "trxId": "TXTEST1793019345095",
+      "tokenHash": "6d1bcd7d195df8af3ea55dbb8e871fd1c71d6d276cedefeb5c707cb232fd78ca",
+      "status": "approved",
+      "telegramInviteStatus": "created",
+      "createdAt": "2026-10-26T12:55:45.096Z",
+      "updatedAt": "2026-10-26T12:55:45.905Z",
+      "reviewedAt": "2026-10-26T12:55:45.903Z",
+      "reviewedBy": "Admin"
+    },
+    {
+      "id": "TVB-TEST-1264",
+      "courseId": "course_web_dev",
+      "courseTitle": "Full-Stack Web Dev",
+      "packageId": "pkg_1m",
+      "packageSnapshot": {
+        "id": "pkg_1m",
+        "name": "১ মাস সাবস্ক্রিপশন",
+        "durationDays": 30,
+        "priceBdt": 150
+      },
+      "amountBdt": 150,
+      "customerName": "গ্রাহক (5678)",
+      "customerPhone": "01812345678",
+      "paymentMethod": "bkash",
+      "senderPhone": "01812345678",
+      "trxId": "TXTEST1793019361263",
+      "tokenHash": "728cc3aa7033b05f49e124798668d9f792078f8acab8221a6bcf20815164259e",
+      "status": "approved",
+      "telegramInviteStatus": "created",
+      "createdAt": "2026-10-26T12:56:01.264Z",
+      "updatedAt": "2026-10-26T12:56:02.143Z",
+      "reviewedAt": "2026-10-26T12:56:02.141Z",
+      "reviewedBy": "Admin"
+    }
+  ],
+  "telegramInvites": [
+    {
+      "id": "tg_admin_1793019345905_TVB-TEST-5096",
+      "orderId": "TVB-TEST-5096",
+      "chatId": "admin_managed_channel",
+      "inviteLink": "https://t.me/+CustomAdminTestLink",
+      "memberLimit": 0,
+      "expiresAt": "2027-10-26T12:55:45.905Z",
+      "createdAt": "2026-10-26T12:55:45.905Z",
+      "isRevoked": false,
+      "isStaticAdminLink": true
+    },
+    {
+      "id": "tg_admin_1793019362142_TVB-TEST-1264",
+      "orderId": "TVB-TEST-1264",
+      "chatId": "admin_managed_channel",
+      "inviteLink": "https://t.me/+CustomAdminTestLink",
+      "memberLimit": 0,
+      "expiresAt": "2027-10-26T12:56:02.142Z",
+      "createdAt": "2026-10-26T12:56:02.142Z",
+      "isRevoked": false,
+      "isStaticAdminLink": true
+    }
+  ],
+  "entitlements": [
+    {
+      "id": "ent_test_TVB-TEST-5296",
+      "orderId": "TVB-TEST-5296",
+      "customerPhone": "01711223344",
+      "courseId": "course_web_dev",
+      "courseTitle": "Full-Stack Web Dev",
+      "packageId": "pkg_1m",
+      "grantedAt": "2026-10-25T14:43:25.298Z",
+      "expiresAt": "2026-11-24T14:43:25.297Z",
+      "status": "active"
+    },
+    {
+      "id": "ent_test_TVB-TEST-2792",
+      "orderId": "TVB-TEST-2792",
+      "customerPhone": "01711223344",
+      "courseId": "course_web_dev",
+      "courseTitle": "Full-Stack Web Dev",
+      "packageId": "pkg_1m",
+      "grantedAt": "2026-10-25T14:44:02.795Z",
+      "expiresAt": "2026-11-24T14:44:02.794Z",
+      "status": "active"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_1793019362143_43fe5a",
+      "action": "TELEGRAM_INVITE_ADMIN_URL_ATTACHED",
+      "actor": "system",
+      "targetType": "order",
+      "targetId": "TVB-TEST-1264",
+      "details": {
+        "url": "https://t.me/+CustomAdminTestLink"
+      },
+      "createdAt": "2026-10-26T12:56:02.143Z"
+    },
+    {
+      "id": "log_1793019345905_5d08ee",
+      "action": "TELEGRAM_INVITE_ADMIN_URL_ATTACHED",
+      "actor": "system",
+      "targetType": "order",
+      "targetId": "TVB-TEST-5096",
+      "details": {
+        "url": "https://t.me/+CustomAdminTestLink"
+      },
+      "createdAt": "2026-10-26T12:55:45.906Z"
+    },
+    {
+      "id": "log_1792939442795_bc1599",
+      "action": "TELEGRAM_INVITE_SKIPPED",
+      "actor": "system",
+      "targetType": "order",
+      "targetId": "TVB-TEST-2792",
+      "details": {
+        "error": "টেলিগ্রাম বটের টোকেন অথবা চ্যানেল চ্যাট আইডি এনভায়রনমেন্ট ভ্যারিয়েবলে কনফিগার করা নেই।",
+        "reason": "missing_credentials"
+      },
+      "createdAt": "2026-10-25T14:44:02.796Z"
+    },
+    {
+      "id": "log_1792939405298_cadc29",
+      "action": "TELEGRAM_INVITE_SKIPPED",
+      "actor": "system",
+      "targetType": "order",
+      "targetId": "TVB-TEST-5296",
+      "details": {
+        "error": "টেলিগ্রাম বটের টোকেন অথবা চ্যানেল চ্যাট আইডি এনভায়রনমেন্ট ভ্যারিয়েবলে কনফিগার করা নেই।",
+        "reason": "missing_credentials"
+      },
+      "createdAt": "2026-10-25T14:43:25.298Z"
+    },
+    {
+      "id": "log_init",
+      "action": "SYSTEM_BOOTSTRAP",
+      "actor": "system",
+      "targetType": "system",
+      "details": {
+        "message": "TechVantage BD Database initialized with default configuration"
+      },
+      "createdAt": "2026-10-25T14:43:25.293Z"
+    }
+  ],
+  "settings": {
+    "brandName": "TechVantage BD",
+    "brandTagline": "প্রফেশনাল ডিজিটাল লার্নিং প্ল্যাটফর্ম",
+    "language": "bn",
+    "currency": "BDT",
+    "bkashNumber": "01983463798",
+    "nagadNumber": "01771576066",
+    "heroHeading": "বাংলাদেশ সেরা প্রিমিয়াম টেক ও প্রোগ্রামিং স্কিল প্ল্যাটফর্ম",
+    "heroDescription": "কোনো দীর্ঘ রেজিস্ট্রেশন ছাড়াই সহজে বিকাশ বা নগদে পেমেন্ট করুন এবং অ্যাডমিনের ভেরিফিকেশন সাপেক্ষে পান অফিশিয়াল প্রাইভেট টেলিগ্রাম কমিউনিটি ও ফুল কোর্স অ্যাক্সেস।",
+    "heroBadgeText": "প্রফেশনাল ডিজিটাল লার্নিং প্ল্যাটফর্ম",
+    "ctaExplore": "কোর্স দেখুন",
+    "ctaPricing": "প্যাকেজ দেখুন",
+    "galleryHeading": "প্রিমিয়াম ভিডিও কোর্সসমূহ",
+    "galleryDescription": "ভিডিও থাম্বনেইলে ক্লিক করে কোর্সের পাঠ্যক্রম এবং পাবলিক প্রিভিউ লেকচার দেখুন।",
+    "footerCopyright": "© 2026 TechVantage BD. সর্বস্বত্ব সংরক্ষিত।",
+    "footerDescription": "বাংলাদেশের টেক লার্নার ও প্রফেশনালদের জন্য বিশ্বমানের প্রজেক্ট-ভিত্তিক আইটি ও সফটওয়্যার স্কিল ডেভেলপমেন্ট প্ল্যাটফর্ম। বিকাশ ও নগদ ইনস্ট্যান্ট ম্যানুয়াল ভেরিফিকেশন।",
+    "contactPhone": "+8801983463798",
+    "contactEmail": "support@techvantagebd.com",
+    "contactAddress": "ঢাকা, বাংলাদেশ",
+    "announcementText": "📢 বিশেষ অফার: মাত্র ১৫০ টাকায় ৩০ দিনের কোর্স এক্সেস শুরু করুন! দ্রুত পেমেন্ট কনফার্মেশন ও টেলিগ্রাম সাপোর্ট।",
+    "showAnnouncement": true,
+    "telegramMode": "admin_link",
+    "telegramChannelUrl": "https://t.me/+CustomAdminTestLink",
+    "isTelegramLinkEnabled": true,
+    "isTelegramConfigured": false,
+    "telegramChatId": "",
+    "telegramInviteExpiryHours": 48,
+    "isOtpConfigured": false,
+    "seoTitle": "TechVantage BD — প্রিমিয়াম টেক ও স্কিল কোর্স প্ল্যাটফর্ম",
+    "seoDescription": "TechVantage BD - Bangladesh premium tech learning portal with bKash and Nagad guest checkout and private Telegram access.",
+    "faqList": [
+      {
+        "id": "faq_1",
+        "question": "কোর্স কেনার জন্য কি ওয়েবসাইটে একাউন্ট বা রেজিস্ট্রেশন করতে হবে?",
+        "answer": "না, কোনো একাউন্ট তৈরি বা লগইন করার প্রয়োজন নেই। শুধুমাত্র আপনার নাম, ফোন নাম্বার এবং বিকাশ বা নগদ ট্রানজেকশন আইডি দিয়ে সরাসরি গেস্ট চেকআউট সম্পন্ন করতে পারবেন।"
+      },
+      {
+        "id": "faq_2",
+        "question": "পেমেন্ট করার পর টেলিগ্রাম লিংক কখন পাব?",
+        "answer": "পেমেন্ট সাবমিট করার পর আমাদের অ্যাডমিন ম্যানুয়ালি আপনার ট্রানজেকশন যাচাই করবেন। পেমেন্ট অনুমোদিত (Approved) হওয়ার সাথে সাথে আপনার অর্ডার ট্র্যাকিং পেইজে ওয়ান-টাইম সিকিউর টেলিগ্রাম ইনভাইটেশন লিংক জেনারেট হয়ে যাবে। অনুমোদন ছাড়া কোনো ইনভাইটেশন প্রদান করা হয় না।"
+      },
+      {
+        "id": "faq_3",
+        "question": "আমি কি পরে আমার অর্ডার এবং টেলিগ্রাম লিংক রিকভার করতে পারব?",
+        "answer": "হ্যাঁ! উপরের \"অর্ডার ট্র্যাকিং / রিকভারি\" মেন্যুতে আপনার অর্ডার টোকেন বা রেজিস্টার্ড ফোন নাম্বার দিয়ে নিরাপদ প্রক্রিয়ায় অর্ডার ভেরিফাই করে টেলিগ্রাম অ্যাক্সেস রিকভার করতে পারবেন।"
+      },
+      {
+        "id": "faq_4",
+        "question": "বিকাশ ও নগদ পেমেন্ট করার নিয়ম কী?",
+        "answer": "আপনার বিকাশ বা নগদ অ্যাপ ওপেন করে Send Money অপশনে যান। আমাদের দেওয়া নাম্বারে সঠিক পরিমাণ টাকা সেন্ড মানি করুন। এরপর প্রাপ্ত TrxID এবং প্রেরক নাম্বার চেকআউট ফর্মে দিয়ে সাবমিট করুন।"
+      },
+      {
+        "id": "faq_5",
+        "question": "লাইফটাইম প্যাকেজে কী কী সুবিধা রয়েছে?",
+        "answer": "লাইফটাইম মেম্বারশিপে আপনি বর্তমান সব কোর্সের পাশাপাশি ভবিষ্যতে যুক্ত হওয়া সকল কোর্সের আজীবন অ্যাক্সেস এবং স্থায়ী টেলিগ্রাম ভিআইপি গ্রুপের সদস্যপদ পাবেন।"
+      }
+    ],
+    "testimonials": [
+      {
+        "id": "t_1",
+        "name": "আরিফুল ইসলাম",
+        "role": "জুনিয়র ফুল-স্ট্যাক ডেভেলপার",
+        "comment": "TechVantage BD-এর কোর্স কনটেন্ট একদম প্র্যাকটিক্যাল। বিকাশ পেমেন্ট করার অল্প কিছুক্ষণের মধ্যেই অ্যাডমিন ভেরিফাই করে টেলিগ্রাম গ্রুপে অ্যাড করে দিয়েছেন।",
+        "rating": 5
+      },
+      {
+        "id": "t_2",
+        "name": "ফারহানা ইয়াসমিন",
+        "role": "পাইথন শিক্ষার্থী",
+        "comment": "কোনো লগইন বা সাইন আপ ছাড়া এত সহজে কোর্স কেনা যায় ভাবিনি। টেলিগ্রাম কমিউনিটিতে মেন্টররা দারুণ হেল্পফুল!",
+        "rating": 5
+      }
+    ]
+  },
+  "recoveryChallenges": []
+}

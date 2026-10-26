@@ -1,0 +1,885 @@
+# MASTER PROMPT — Complete TechVantage BD Course Selling Platform
+
+Build a complete, premium, production-oriented online course-selling website for **TechVantage BD**, targeting customers in Bangladesh.
+
+This must be a real, functional web application, not just a landing page, UI mockup, prototype, or collection of non-functional buttons.
+
+The platform must support account-free course browsing, guest checkout, bKash/Nagad manual payment verification, administrator-controlled Telegram access, secure order tracking and recovery, a hidden administrator entry point, full website content management, course image uploads, and a premium blurred video-style course gallery.
+
+## 1. First Inspect the Project
+
+Before writing code, inspect the existing workspace and identify:
+
+- Existing frontend and backend frameworks.
+- Current database schema and migrations.
+- Existing checkout, order tracking, and course-access logic.
+- Current administrator authentication and permissions.
+- Telegram integration and environment variables.
+- Existing reusable components, routes, tests, and configuration.
+
+If an existing application is present, improve it without unnecessarily replacing its architecture or deleting working features.
+
+If the workspace is empty, create a complete application using a maintainable TypeScript frontend, a secure server-side API, and Supabase PostgreSQL for persistent data and authentication. Choose a compatible framework based on the available environment and deployment target.
+
+Do not create a frontend-only application that stores orders or administrator credentials in browser storage.
+
+## 2. Business Rules and Fixed Configuration
+
+Use the following initial settings:
+
+**Brand:** TechVantage BD
+
+**Website language:** Bengali by default, with optional English support if practical.
+
+**Currency:** Bangladeshi Taka (BDT / ৳)
+
+**Initial packages:**
+
+| Package | Duration | Price |
+|---|---|---:|
+| 1 Month | 30 days | ৳150 |
+| 3 Months | 90 days | ৳250 |
+| Lifetime | Lifetime access | ৳500 |
+
+**Payment methods:**
+
+- bKash Send Money: `01983463798`
+- Nagad Send Money: `01771576066`
+
+**Initial administrator PIN:** `20055`
+
+**Footer copyright:** `© 2026 TechVantage BD. সর্বস্বত্ব সংরক্ষিত।`
+
+Treat these as initial configuration values. Authorized administrators may update editable website settings through the Admin Panel, but all changes must be validated server-side.
+
+Never trust a package name, price, duration, payment status, or entitlement submitted by the browser. The server must determine the authoritative package and amount.
+
+## 3. Premium Design System
+
+Create a polished, modern, premium digital-learning experience.
+
+The website should feel like a professional streaming platform combined with a modern course marketplace.
+
+Design requirements:
+
+- Responsive desktop, tablet, and mobile layouts.
+- Premium typography supporting Bengali text.
+- Consistent spacing, alignment, border radii, and iconography.
+- Attractive course cards, subtle shadows, refined gradients, and smooth but lightweight transitions.
+- Clear navigation, loading indicators, empty states, error messages, and success notifications.
+- Accessible contrast, keyboard navigation, and appropriate focus states.
+- Mobile-friendly payment forms and administrator tables.
+- Fast-loading, optimized images.
+- No unnecessary animations, clutter, or excessive visual effects.
+- No broken layouts or horizontal scrolling on mobile.
+
+Use reusable components and centralized theme tokens. Preserve existing branding if the project already has an established design.
+
+## 4. Public Website and Homepage
+
+Create a complete homepage containing the following sections.
+
+### A. Header and Navigation
+
+Include:
+
+- TechVantage BD logo and name.
+- Home.
+- Courses.
+- Packages or Pricing.
+- FAQ.
+- Contact.
+- Order Tracking / Recovery.
+
+Customers must not be required to sign up or log in to browse or purchase courses.
+
+Do not display a public Admin Dashboard button, administrator menu, or visible administrator login section.
+
+### B. Hero Section
+
+Create a premium hero section with:
+
+- A compelling Bengali headline.
+- A concise course-platform description.
+- A prominent “কোর্স দেখুন” button.
+- A secondary “প্যাকেজ দেখুন” button.
+- Attractive visual treatment related to video learning.
+
+Buttons must navigate to actual sections or pages.
+
+### C. Course Gallery
+
+Display courses in a responsive, video-platform-style gallery.
+
+Requirements:
+
+- Use uploaded course thumbnails.
+- Prefer a 16:9 video-cover ratio.
+- Show a subtle blur on locked thumbnails.
+- Place a prominent lock icon in the center of each locked image.
+- Use a subtle dark overlay to create the appearance of a locked video preview.
+- Include the course title and appropriate public information.
+- Include package or price information where applicable.
+- Use a premium hover effect and responsive grid.
+- Show featured courses in a prominent section if configured.
+- Allow course categories and sorting when the catalog becomes large.
+- Make every course card clickable.
+- Open the course details or package-selection interface when a customer clicks a card.
+
+The visual design should make the thumbnails look like locked video covers rather than ordinary photos.
+
+Important: CSS blur and a lock icon are visual effects only. Never use them as the actual access-control mechanism. Protect original private assets and paid lesson endpoints server-side.
+
+If a course is not publicly available, do not expose its protected content through public API responses.
+
+### D. Course Details
+
+Each course must support:
+
+- Title.
+- Short and full description.
+- Category.
+- Thumbnail.
+- Course highlights.
+- Curriculum and lesson titles where configured for public preview.
+- Package options.
+- Access duration.
+- Price.
+- Purchase button.
+- FAQ or important instructions where relevant.
+
+Customers may view public course details without creating an account.
+
+Do not expose paid lesson content or private video URLs before the required entitlement is granted.
+
+### E. Packages and Pricing
+
+Show the three initial packages:
+
+- 1 Month — ৳150.
+- 3 Months — ৳250.
+- Lifetime — ৳500.
+
+Clearly explain the access duration and what each package includes.
+
+Each package must have a working “এখনই কিনুন” button.
+
+Clicking “এখনই কিনুন” must open checkout directly. Never redirect the customer to registration or login.
+
+Package labels, descriptions, prices, and availability should be manageable through the Admin Panel. Preserve historical order pricing when package prices change.
+
+### F. FAQ, Contact, and Footer
+
+Provide editable FAQ entries, contact information, and informational content.
+
+The footer must display the exact text:
+
+`© 2026 TechVantage BD. সর্বস্বত্ব সংরক্ষিত।`
+
+Only the copyright symbol `©` should act as the discreet administrator entry point described later.
+
+Do not place a visible admin link elsewhere on the public website.
+
+## 5. Account-Free Guest Checkout
+
+Implement a complete checkout process that does not require customer registration.
+
+When the customer clicks “এখনই কিনুন”:
+
+1. Open the checkout page or modal.
+2. Show the selected course and package.
+3. Show the authoritative package price.
+4. Allow the customer to select bKash or Nagad.
+5. Display the relevant recipient number.
+6. Provide a working one-click copy button.
+7. Display Bengali step-by-step Send Money instructions.
+8. Collect the required customer and payment details.
+9. Validate the submitted data on the server.
+10. Create a pending order.
+11. Provide a private order-tracking URL.
+
+Required form fields:
+
+- Customer name.
+- Contact phone number.
+- Payment method.
+- Sender phone number.
+- Transaction ID / TrxID.
+
+Do not require email or a customer account unless a separate optional feature genuinely needs it.
+
+### Payment Instructions
+
+Show Bengali instructions explaining how to:
+
+1. Open the appropriate payment application.
+2. Select Send Money.
+3. Enter the correct recipient number.
+4. Send the exact displayed amount.
+5. Copy the transaction ID.
+6. Enter the sender phone number and TrxID.
+7. Submit the order for manual review.
+
+Clearly explain that submitting a transaction ID does not automatically mean the payment has been verified.
+
+### Server-Side Validation
+
+The server must:
+
+- Validate the course and package IDs.
+- Read the current price and duration from trusted database records.
+- Reject altered or unsupported prices.
+- Validate phone numbers and form fields.
+- Normalize transaction IDs according to documented rules.
+- Reject duplicate transaction IDs according to the payment-provider and business rules.
+- Prevent concurrent requests from creating duplicate orders.
+- Use appropriate database constraints and transactions.
+- Store the selected package and price as an immutable order snapshot.
+- Rate-limit checkout submissions.
+- Return safe, useful errors.
+
+Never trust the browser to determine whether an order is paid or approved.
+
+## 6. Secure Guest Order Tracking
+
+After checkout, create a private order-tracking URL.
+
+Use a cryptographically secure random token containing at least 32 random bytes.
+
+Requirements:
+
+- Generate the raw token on the server.
+- Store only a SHA-256 hash of the token in the database.
+- Do not log the raw token.
+- Do not use an order ID, phone number, or transaction ID as an authentication secret.
+- Validate tokens safely.
+- Use constant-time comparison where appropriate.
+- Rate-limit tracking requests.
+- Avoid exposing whether an arbitrary order ID exists.
+- Never return another customer's personal information or order details.
+
+The private order page should show:
+
+- Order reference.
+- Course and selected package.
+- Submitted payment method.
+- Order creation date.
+- Current status.
+- Appropriate Bengali instructions.
+- Administrator review notes intended for the customer, if supported.
+- Telegram access information only when the order is approved and a valid invitation is available.
+
+Provide clear status labels:
+
+- অপেক্ষমাণ — Pending.
+- অনুমোদিত — Approved.
+- বাতিলকৃত — Rejected.
+- পেমেন্ট যাচাইয়ে সমস্যা — Payment verification issue, when applicable.
+
+Allow customers to copy their private tracking URL and recover access safely.
+
+Do not expose private tracking information in public course listings or search results.
+
+## 7. Mandatory Manual Payment Approval
+
+This is a strict business rule.
+
+**No customer may receive a usable Telegram invitation before the administrator explicitly approves their payment.**
+
+The required workflow is:
+
+`Guest Checkout → Pending Order → Administrator Reviews Payment → Approve or Reject → Telegram Invitation Generation → Verified Customer Receives Access`
+
+Before approval:
+
+- Do not expose an invitation link.
+- Do not send an invitation link.
+- Do not generate an invitation for customer delivery.
+- Do not unlock protected lessons.
+- Do not mark the order as approved.
+
+When an administrator approves a payment:
+
+1. Verify the administrator's authorization on the server.
+2. Verify that the order is pending and eligible for approval.
+3. Record the administrator's decision and timestamp.
+4. Update the order using a safe transactional operation.
+5. Grant the appropriate course entitlement.
+6. Generate a real Telegram invite using the configured bot.
+7. Store the invitation and its expiration metadata securely.
+8. Make the invitation available on the customer's verified private order page.
+9. Send a notification only if a genuine delivery integration is configured and its result is confirmed.
+
+Use idempotency or equivalent protection to prevent duplicate approval, entitlement creation, or conflicting invite links.
+
+If invite generation fails, preserve the payment decision, mark Telegram delivery as failed or pending retry, and show an actionable status in the Admin Panel. Never fabricate a successful delivery.
+
+Rejected orders must never receive Telegram access.
+
+## 8. Real Telegram Bot Integration
+
+Integrate with the official Telegram Bot API using server-side credentials.
+
+Required configuration:
+
+- Telegram bot token.
+- Target Telegram channel or group ID.
+- Public application URL.
+- Invite-link expiration configuration.
+
+Use `createChatInviteLink` after authorized approval.
+
+Requirements:
+
+- Use `member_limit: 1` where supported.
+- Set an appropriate expiration timestamp.
+- Ensure the bot has the required administrator permissions.
+- Handle Telegram API errors and rate limits.
+- Validate the returned API response.
+- Do not return a simulated URL as a real invitation.
+- Never expose the bot token in frontend code or public environment variables.
+- Log operational errors without logging sensitive tokens.
+- Provide a safe administrator retry mechanism.
+- Avoid creating multiple invitations for repeated requests.
+
+Simulation mode may be used in development and automated tests, but must be explicitly configured and disabled in production.
+
+### Subscription Expiration
+
+Distinguish invite-link expiry from course-subscription expiry.
+
+- 1 Month: 30-day entitlement.
+- 3 Months: 90-day entitlement.
+- Lifetime: no scheduled expiration.
+
+Use the server/database as the authoritative source for entitlement expiry.
+
+If automatic Telegram group removal at subscription expiry is part of the supported configuration, implement and test the necessary scheduled job and bot permissions. Otherwise, clearly state the limitation and do not claim automatic member removal.
+
+## 9. Phone-Number-Based Order and Telegram Recovery
+
+Provide a customer-facing “অর্ডার রিকভার করুন” feature.
+
+Customers should be able to recover an eligible approved order using the contact phone number submitted during purchase.
+
+However, **a phone number alone must not authorize access to a private order or Telegram link**.
+
+Implement a secure recovery process:
+
+1. The customer enters their contact phone number.
+2. The server initiates a verified ownership challenge.
+3. Send a one-time code through a configured SMS/OTP provider.
+4. Enforce code expiry, attempt limits, rate limiting, and replay protection.
+5. After successful verification, show only orders associated with the verified phone number.
+6. Allow the customer to select an eligible order.
+7. Issue a new secure private tracking token or restore access using an appropriately protected flow.
+8. Reveal an existing valid Telegram invitation only if the order is approved and the invitation remains valid.
+9. If the invitation has expired or been revoked, use a safe recovery or regeneration process with duplicate protection.
+
+Never expose a private order or invitation based only on a phone number and transaction ID.
+
+If an OTP provider is not configured, show an honest setup-required message and document the required credentials. Do not pretend phone ownership was verified.
+
+Do not require customers to register or log in.
+
+## 10. Hidden Administrator Entry and PIN
+
+The only public entry point to the administrator workflow must be the copyright symbol `©` in the footer.
+
+When a visitor clicks `©`:
+
+1. Open a professional PIN-entry modal.
+2. Display a Bengali prompt requesting the administrator PIN.
+3. Validate the PIN securely on the server.
+4. If the PIN is wrong, show a clear Bengali error message.
+5. If the PIN is correct, proceed to the actual administrator authentication and authorization process.
+6. Open the Admin Panel only after server-side administrator authorization succeeds.
+
+Initial configured PIN: `20055`.
+
+### Security Rules
+
+Do not implement the PIN check only in frontend JavaScript.
+
+Do not embed the PIN in:
+
+- Public HTML.
+- Browser JavaScript.
+- Client-side environment variables.
+- Public API responses.
+- Source maps distributed to users.
+
+Store and validate the secret securely on the server, or use an appropriate secure credential-verification mechanism.
+
+Add rate limiting, attempt limits, secure session handling, and audit logging.
+
+The PIN is an additional discreet entry step, not a substitute for administrator authorization.
+
+Preserve the existing administrator account and role system. Do not create public administrator registration.
+
+### No Other Admin Entry Point
+
+Do not show an admin login button, admin navigation item, or administrator dashboard link anywhere else on the public website.
+
+However, hidden navigation is not a security boundary. All administrative pages, API endpoints, and database operations must independently verify authorization.
+
+Protect direct URL access and reject unauthorized requests.
+
+## 11. Full Admin Panel and Website CMS
+
+Build a comprehensive administrator dashboard that allows the owner to manage the website without editing source code for routine content changes.
+
+The dashboard should have a professional responsive layout with a sidebar, page headings, searchable tables, confirmation dialogs, status indicators, notifications, and clear loading/error states.
+
+### A. Dashboard Overview
+
+Display:
+
+- Total orders.
+- Pending payments.
+- Approved orders.
+- Rejected orders.
+- Total courses.
+- Active subscriptions.
+- Telegram invitation failures.
+- Recent administrator activity.
+- Relevant payment totals based on recorded and approved transactions.
+
+Do not count pending or rejected payments as confirmed revenue.
+
+### B. Course Management
+
+Allow authorized administrators to:
+
+- Create courses.
+- Edit titles and descriptions.
+- Manage categories.
+- Upload and replace thumbnails.
+- Configure featured status.
+- Publish and unpublish courses.
+- Preview the public course card.
+- Manage public curriculum information.
+- Add, edit, reorder, and remove lessons.
+- Manage protected lesson content and video references.
+- Associate courses with packages.
+- Manage course visibility.
+- Archive or delete courses with appropriate confirmation and protection for historical orders.
+
+### C. Image Upload and Media Library
+
+Provide an image upload interface for course thumbnails and other supported website images.
+
+Requirements:
+
+- Validate actual file type and size.
+- Support common safe image formats such as JPEG, PNG, and WebP.
+- Generate optimized image variants where practical.
+- Generate a blurred gallery derivative when appropriate.
+- Preserve the original image unless explicitly replaced or deleted.
+- Use secure storage and access policies.
+- Prevent arbitrary executable uploads.
+- Show upload progress, preview, validation errors, and success messages.
+- Allow image replacement and deletion with confirmation.
+- Avoid broken image URLs and orphaned storage records.
+
+The public homepage gallery should display the intended blurred thumbnail with a centered lock icon. Authorized administrators should be able to preview the intended appearance before publishing.
+
+### D. Package and Pricing Management
+
+Allow administrators to manage:
+
+- Package labels.
+- Display prices.
+- Durations.
+- Package descriptions.
+- Feature lists.
+- Availability.
+- Course/package associations.
+
+Initial defaults:
+
+- 1 Month — ৳150.
+- 3 Months — ৳250.
+- Lifetime — ৳500.
+
+Validate every order against the canonical server-side package record.
+
+Existing orders must retain their original price and package details even when a package is edited later.
+
+### E. Homepage and Website Content Management
+
+Allow administrators to manage the editable content already used by the site, including:
+
+- Logo and website name.
+- Hero heading and description.
+- Hero call-to-action labels.
+- Homepage section visibility.
+- Featured course selection and order.
+- Course gallery ordering.
+- FAQ entries.
+- Contact details.
+- Announcements.
+- About and informational content.
+- Footer text.
+- SEO titles and descriptions.
+- Social-sharing image.
+- Payment recipient numbers.
+- Appropriate Telegram configuration.
+- Other existing public content and settings.
+
+Persist these changes in the database or another durable server-side configuration store.
+
+Refreshing the website must not revert saved edits.
+
+Validate settings and uploads server-side. Never expose private configuration or credentials in public API responses.
+
+### F. Order and Payment Review
+
+Provide a dedicated order-management page.
+
+Allow administrators to:
+
+- Search by order reference.
+- Filter by status.
+- Filter by payment method.
+- Filter by package.
+- Search eligible customer contact details.
+- Inspect submitted transaction information.
+- Review sender phone and customer phone.
+- Approve or reject an order.
+- Enter internal review notes.
+- View Telegram invitation status.
+- Retry failed Telegram delivery.
+- Inspect order timestamps.
+- View audit logs.
+
+Use confirmation dialogs for sensitive operations.
+
+Record who performed each action and when.
+
+### G. Subscription and Access Management
+
+Allow administrators to inspect course entitlements and subscription status.
+
+Provide appropriate controls for authorized administrators to:
+
+- View active and expired access.
+- Inspect package and expiry dates.
+- Revoke access when justified.
+- Correct access errors through audited actions.
+- Review Telegram invitation state.
+- Retry permitted invitation operations.
+
+Do not allow administrative actions to bypass audit logging or database authorization.
+
+### H. Settings and Audit Logs
+
+Provide settings and audit-log screens.
+
+Record security-sensitive actions such as:
+
+- PIN verification failures.
+- Administrator authentication events.
+- Course changes.
+- Image uploads and deletions.
+- Package changes.
+- Payment approvals and rejections.
+- Access grants and revocations.
+- Telegram invitation attempts and failures.
+- Configuration changes.
+
+Never store raw PINs, raw private access tokens, passwords, or Telegram bot tokens in audit logs.
+
+## 12. Database Design and Supabase
+
+Use a clean relational schema with appropriate foreign keys, indexes, constraints, and migrations.
+
+The schema should support at least:
+
+- Courses.
+- Course categories.
+- Lessons.
+- Packages.
+- Course/package associations.
+- Guest orders.
+- Payment submissions.
+- Course access grants.
+- Telegram invitations.
+- Website settings.
+- FAQ entries.
+- Announcements.
+- Admin roles and permissions.
+- Audit logs.
+- Recovery challenges.
+- Notification or delivery records where implemented.
+
+Adapt the design to existing tables instead of creating conflicting duplicates.
+
+### Guest Orders
+
+Support guest orders without mandatory user accounts.
+
+Store customer name, contact phone, sender phone, payment method, transaction ID, package snapshot, amount, order status, token hash, timestamps, and other required operational metadata.
+
+Use a database-level uniqueness strategy for transaction IDs appropriate to the supported payment methods and business rules.
+
+### Row-Level Security
+
+If using Supabase:
+
+- Enable appropriate RLS on exposed tables.
+- Define least-privilege policies.
+- Configure table grants correctly.
+- Prevent anonymous users from directly reading or modifying private orders.
+- Prevent anonymous users from modifying packages, prices, course content, and administrator settings.
+- Protect audit logs, access grants, and Telegram invitations.
+- Use server-side privileged access only where necessary.
+- Never ship the service-role key to the browser.
+
+All sensitive authorization decisions must be enforced on the server and/or through correct database policies.
+
+### Migrations
+
+- Create repeatable, versioned migrations.
+- Preserve existing data.
+- Avoid destructive schema changes.
+- Document how migrations are applied.
+- Do not claim that a migration was applied unless it was actually executed successfully.
+
+## 13. Backend API and Business Logic
+
+Create a well-structured API layer for the features above.
+
+Required logical operations include:
+
+- List public courses.
+- Read public course details.
+- Create a guest order.
+- Track an order with a private token.
+- Recover orders after verified phone ownership.
+- Read protected lessons after entitlement validation.
+- Manage courses and lessons as an administrator.
+- Manage packages and site content as an administrator.
+- Upload and manage media as an administrator.
+- List and review orders as an administrator.
+- Approve or reject payments as an administrator.
+- Create or retry Telegram invitations after approval.
+- Read and manage subscription entitlements.
+- Verify the hidden-entry PIN.
+- Read and update appropriate website settings.
+- Read security audit logs as an authorized administrator.
+
+Use request validation, consistent error responses, rate limiting, safe database queries, and appropriate logging.
+
+Do not create fake successful API responses or silently fall back to mock data in production.
+
+## 14. Security and Privacy
+
+Implement:
+
+- Secure administrator authentication.
+- Server-side role verification.
+- CSRF protection where applicable.
+- Input validation and output escaping.
+- Secure session cookies where applicable.
+- Rate limiting.
+- Brute-force protection.
+- Safe file-upload validation.
+- Private storage for sensitive assets.
+- Secure order-token generation and validation.
+- Protection against IDOR and cross-order access.
+- Appropriate database constraints.
+- Safe error messages.
+- Secret management.
+- Production-safe CORS and security headers where applicable.
+- Audit logging.
+- Protection against duplicate processing and race conditions.
+
+Do not trust hidden buttons, frontend state, browser storage, or client-supplied administrator roles.
+
+Never expose private transaction information, recovery secrets, raw access tokens, passwords, service-role keys, or Telegram bot tokens.
+
+Collect only the personal information required for the service.
+
+## 15. Notifications and Delivery Status
+
+Support clear delivery states such as:
+
+- Pending review.
+- Approved.
+- Rejected.
+- Telegram invitation pending.
+- Telegram invitation created.
+- Telegram delivery or generation failed.
+- Recovery verification required.
+
+If SMS or email delivery is implemented, use a real configured provider and confirm its response before reporting delivery success.
+
+Do not claim that a message was sent merely because a database row was created.
+
+If no notification provider is configured, show the verified status on the private order-tracking page and document the missing integration.
+
+## 16. Testing and Acceptance Criteria
+
+Implement meaningful automated tests and run them.
+
+Test at least:
+
+### Public Website
+- Homepage renders correctly.
+- Course gallery displays blurred images and centered lock icons.
+- Course cards open the appropriate details or checkout.
+- Responsive layouts work at common screen sizes.
+- Footer copyright text is exact.
+
+### Guest Checkout
+- Customers can browse and purchase without registering.
+- Valid package prices are server-authoritative.
+- Tampered package IDs or prices are rejected.
+- Required fields are validated.
+- Duplicate transaction IDs are rejected.
+- Concurrent checkout submissions cannot bypass duplicate protection.
+
+### Order Tracking and Recovery
+- Valid private tokens work.
+- Incorrect, malformed, and unauthorized tokens fail.
+- An order ID alone does not reveal private details.
+- Customers cannot access another customer's order.
+- Phone-number recovery requires verified ownership.
+- Recovery rate limits and expiry rules work.
+
+### Administrator
+- Clicking `©` opens the PIN dialog.
+- Incorrect PINs are rejected.
+- PIN verification is server-side.
+- Correct PIN alone does not grant administrator permissions.
+- Direct unauthorized requests to admin APIs fail.
+- Admin changes persist after refresh.
+- Image uploads and replacements work.
+- Payment approval and rejection are recorded.
+- Unauthorized visitors cannot modify website settings.
+
+### Telegram
+- Pending orders never reveal a usable invitation.
+- Rejected orders never receive invitations.
+- Approved orders can generate real invitations when valid credentials and permissions are available.
+- Failed Telegram requests are reported accurately.
+- Repeated requests do not generate conflicting links.
+- Invitation recovery follows the secure verification flow.
+
+### Entitlements
+- Pending and rejected orders cannot unlock paid lessons.
+- Approved orders receive the correct entitlement.
+- Thirty-day and ninety-day access expires according to server time.
+- Lifetime access does not expire accidentally.
+- Expired access is rejected.
+- Protected lesson content cannot be obtained simply by calling public APIs.
+
+### Build and Integration
+- Run the available test suite.
+- Run TypeScript checks and linting.
+- Run a production build.
+- Verify database migrations where the environment allows.
+- Separate mocked tests from live integration tests.
+
+Do not fabricate passing tests or live integration results.
+
+## 17. Environment Configuration and Deployment
+
+Create a clear `.env.example` containing placeholder names, not real secrets.
+
+Document all required configuration for:
+
+- Supabase project URL and public key.
+- Server-side database access or privileged keys where required.
+- Telegram bot token.
+- Telegram channel/group ID.
+- Application base URL.
+- PIN verification secret or credential configuration.
+- Rate-limiting storage.
+- OTP/SMS provider.
+- Storage configuration if separate.
+- Production/development mode.
+
+Never expose server-only secrets through frontend environment variables.
+
+Document:
+
+1. How to install dependencies.
+2. How to configure environment variables.
+3. How to apply database migrations.
+4. How to configure Supabase authentication and RLS.
+5. How to add the Telegram bot as an administrator with required permissions.
+6. How to configure OTP delivery for secure phone recovery.
+7. How to run the application locally.
+8. How to run tests and build for production.
+9. How to deploy using a compatible hosting platform.
+10. How to configure the production domain and HTTPS.
+11. How to create or provision the initial administrator securely.
+
+Do not assume that a hosting platform supports server-side routes, background jobs, or persistent rate-limit storage without verifying its capabilities.
+
+## 18. Development Workflow
+
+Work in controlled stages.
+
+### Stage 1 — Repository Audit
+Inspect the current codebase and identify existing features, gaps, risks, and migration requirements.
+
+### Stage 2 — Core Foundation
+Complete database schema, public course catalog, guest checkout, order creation, and private tracking.
+
+### Stage 3 — Payment and Telegram
+Implement manual payment review, server-authorized approval, real Telegram invitation generation, and secure recovery.
+
+### Stage 4 — Admin Panel
+Implement the hidden footer entry, PIN dialog, administrator authorization, course management, image upload, package management, website CMS, orders, subscriptions, and audit logs.
+
+### Stage 5 — UI Polish
+Complete the premium homepage, blurred locked course gallery, responsive layouts, forms, loading states, and error states.
+
+### Stage 6 — Security and Testing
+Run tests, validate authorization, check migrations, verify integrations where credentials are available, and fix regressions.
+
+Do not stop after generating a plan or creating static UI. Implement the application in the available workspace.
+
+If the project is too large to finish in one pass, prioritize a working end-to-end application and continue in clearly defined stages without discarding completed work.
+
+## 19. Final Delivery Report
+
+When implementation is complete, provide a truthful report containing:
+
+- The actual framework and architecture used.
+- Files created and modified.
+- Features implemented.
+- Database migrations created and whether they were applied.
+- Supabase integration status.
+- Telegram integration status.
+- OTP/recovery integration status.
+- Automated test results.
+- TypeScript, lint, and production build results.
+- Any incomplete features or configuration requirements.
+- Exact local run instructions.
+- Exact deployment steps.
+
+Never claim production readiness solely because the frontend renders or a mocked test passes.
+
+Never replace real integrations with fake responses without explicitly identifying the limitation.
+
+## Final Non-Negotiable Rules
+
+1. Customers never need to register or log in to purchase courses.
+2. Telegram access is withheld until the administrator explicitly approves the payment.
+3. A real Telegram invitation is required before reporting successful invitation generation.
+4. Customers can recover approved orders through verified phone ownership.
+5. The homepage shows premium blurred course thumbnails with centered lock icons.
+6. The footer copyright symbol `©` is the only public administrator entry point.
+7. The initial PIN is `20055`, verified server-side, followed by actual administrator authorization.
+8. Website content, courses, images, packages, and settings must be manageable through the Admin Panel.
+9. Existing working features and data must be preserved.
+10. Security must be enforced on the server and database, not merely hidden in the UI.
+11. No fake payment verification, fake Telegram delivery, fake OTP verification, or fabricated test results.
+12. Every visible button and form must perform its intended action.
+13. Build the real application, test it, and clearly report any remaining configuration or deployment work.
+
+Start by inspecting the current workspace, then implement the complete TechVantage BD platform using these requirements.

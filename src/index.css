@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #090d16;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+
+  /* Custom tabular numbers font for prices & TrxID */
+  .tabular-nums {
+    font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Locked course video thumbnail visual styling */
+.locked-thumbnail-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: #0f172a;
+}
+
+.locked-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3.5px) brightness(0.75);
+  transform: scale(1.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.locked-thumbnail-container:hover .locked-thumbnail-img {
+  filter: blur(2px) brightness(0.85);
+  transform: scale(1.08);
+}
+
+.locked-thumbnail-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.4) 0%, rgba(9, 13, 22, 0.85) 100%);
+  pointer-events: none;
+}
